@@ -48,16 +48,18 @@ button {
     font-size: 3rem;
   }
   .my-decision {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-position: center;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-image: url(../img/問號.png);
   }
   .npcs-decision {
     background-position: center;
     background-size: 40%;
     background-repeat: no-repeat;
 
-    animation: change-img 2s infinite step-end;
+    animation: 2s infinite step-end;
+    animation-name: change-img;
   }
   .vs {
     width: 20%;
@@ -83,6 +85,22 @@ button {
 
   display: flex;
   gap: 20px;
+}
+.filter {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  display: none;
+}
+.filter.active {
+  display: block;
 }
 .game-options {
   flex: 3;
